@@ -1,0 +1,264 @@
+/* --- Reset & Variables --- */
+:root {
+    --aws-navy: #232f3e;
+    --aws-dark-blue: #19222d;
+    --aws-orange: #ff9900;
+    --aws-orange-hover: #ec8d00;
+    --text-white: #ffffff;
+    --text-grey: #545b64;
+    --bg-light: #f2f3f3;
+    --card-hover: #f8f9fa;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: var(--bg-light);
+    color: #16191f;
+}
+
+/* --- Navbar --- */
+.navbar {
+    background-color: var(--aws-navy);
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-left, .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    color: var(--text-white);
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links a, .nav-item {
+    color: #d9d9d9;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.nav-links a:hover, .nav-item:hover {
+    color: var(--text-white);
+    text-decoration: underline;
+}
+
+.btn-primary {
+    background-color: var(--aws-orange);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: bold;
+    color: var(--aws-navy);
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+
+.btn-primary:hover {
+    background-color: var(--aws-orange-hover);
+}
+
+.menu-toggle {
+    display: none;
+    color: white;
+    font-size: 1.5rem;
+}
+
+/* --- Hero Section --- */
+.hero {
+    background: linear-gradient(135deg, var(--aws-navy) 0%, #161e2d 100%);
+    color: var(--text-white);
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    color: #d9d9d9;
+    margin-bottom: 30px;
+}
+
+.cta-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn-orange {
+    background-color: var(--aws-orange);
+    color: var(--aws-navy);
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--text-white);
+    border: 1px solid var(--text-white);
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-orange:hover { background-color: var(--aws-orange-hover); }
+.btn-outline:hover { background-color: rgba(255,255,255,0.1); }
+
+/* --- Services Grid --- */
+.services-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.search-bar {
+    position: relative;
+    width: 300px;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px 10px 10px 35px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.search-bar i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.service-card {
+    background: white;
+    padding: 25px;
+    border: 1px solid #eaeded;
+    border-radius: 0; /* AWS often uses sharp corners or very slight radius */
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.service-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.icon-box {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    color: white;
+}
+
+/* Service Colors */
+.orange { background-color: #ec7211; }
+.blue { background-color: #3f8624; } /* AWS Database often green/blue */
+.green { background-color: #d13212; } /* AWS Storage often reddish/orange */
+.purple { background-color: #8c4fff; }
+
+.service-card h3 {
+    margin-bottom: 10px;
+    color: var(--aws-navy);
+}
+
+.service-card p {
+    color: var(--text-grey);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.learn-more {
+    color: #0073bb;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.learn-more:hover {
+    text-decoration: underline;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: var(--aws-navy);
+    color: #ccc;
+    text-align: center;
+    padding: 20px;
+    margin-top: 60px;
+    font-size: 0.8rem;
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+    .nav-links, .nav-right .nav-item {
+        display: none;
+    }
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+}

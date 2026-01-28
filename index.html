@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS Cloud Clone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-left">
+            <div class="logo">
+                <i class="fab fa-aws"></i> AWS Theme
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Solutions</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Documentation</a></li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <a href="#" class="nav-item">Contact Sales</a>
+            <a href="#" class="nav-item">Support</a>
+            <button class="btn-primary">Sign In to the Console</button>
+        </div>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Build on the Global Cloud</h1>
+            <p>Reliable, scalable, and inexpensive cloud computing services. Free to join, pay only for what you use.</p>
+            <div class="cta-group">
+                <button class="btn-orange">Create an AWS Account</button>
+                <button class="btn-outline">Contact Sales</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="services-container">
+        <div class="section-header">
+            <h2>Explore Our Services</h2>
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" id="serviceSearch" placeholder="Filter services (e.g., 'Compute', 'Database')...">
+            </div>
+        </div>
+
+        <div class="service-grid" id="serviceGrid">
+            <div class="service-card" data-category="compute">
+                <div class="icon-box orange">
+                    <i class="fas fa-server"></i>
+                </div>
+                <h3>Amazon EC2</h3>
+                <p>Virtual servers in the cloud. Secure and resizable compute capacity.</p>
+                <a href="#" class="learn-more">Learn more <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="service-card" data-category="storage">
+                <div class="icon-box green">
+                    <i class="fas fa-hdd"></i>
+                </div>
+                <h3>Amazon S3</h3>
+                <p>Object storage built to store and retrieve any amount of data from anywhere.</p>
+                <a href="#" class="learn-more">Learn more <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="service-card" data-category="database">
+                <div class="icon-box blue">
+                    <i class="fas fa-database"></i>
+                </div>
+                <h3>Amazon RDS</h3>
+                <p>Managed relational database service for MySQL, PostgreSQL, Oracle, and more.</p>
+                <a href="#" class="learn-more">Learn more <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="service-card" data-category="compute">
+                <div class="icon-box orange">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <h3>AWS Lambda</h3>
+                <p>Run code without thinking about servers. Pay only for the compute time you consume.</p>
+                <a href="#" class="learn-more">Learn more <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+             <div class="service-card" data-category="database">
+                <div class="icon-box blue">
+                    <i class="fas fa-table"></i>
+                </div>
+                <h3>Amazon DynamoDB</h3>
+                <p>Fast and flexible NoSQL database service for any scale.</p>
+                <a href="#" class="learn-more">Learn more <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+             <div class="service-card" data-category="networking">
+                <div class="icon-box purple">
+                    <i class="fas fa-network-wired"></i>
+                </div>
+                <h3>Amazon VPC</h3>
+                <p>Define and launch AWS resources in a logically isolated virtual network.</p>
+                <a href="#" class="learn-more">Learn more <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 AWS Clone Project. Not affiliated with Amazon.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
